@@ -61,17 +61,28 @@ function PageContact() {
   const [submitted, setSubmitted] = React.useState(false);
   useReveal([submitted]);
 
+  const [error, setError] = React.useState(false);
+
   const onSubmit = async (e) => {
     e.preventDefault();
     if (!agreed) return;
-    const res = await fetch('https://ssgform.com/s/aOu0E7Uj6cEc', {
-      method: 'POST',
-      body: new FormData(e.target),
-      headers: { 'X-Requested-With': 'XMLHttpRequest' },
-    });
-    if (res.ok) {
-      setSubmitted(true);
-      window.scrollTo({ top: 200, behavior: 'smooth' });
+    setError(false);
+    try {
+      const res = await fetch('https://ssgform.com/s/aOu0E7Uj6cEc', {
+        method: 'POST',
+        body: new FormData(e.target),
+        headers: { 'X-Requested-With': 'XMLHttpRequest' },
+      });
+      console.log('status:', res.status, res.ok);
+      if (res.ok) {
+        setSubmitted(true);
+        window.scrollTo({ top: 200, behavior: 'smooth' });
+      } else {
+        setError(true);
+      }
+    } catch (err) {
+      console.error('送信エラー:', err);
+      setError(true);
     }
   };
 
@@ -174,6 +185,11 @@ function PageContact() {
                 </label>
               </div>
 
+              {error && (
+                <div className="full" style={{color: 'red', fontSize: 13, marginTop: 8}}>
+                  送信に失敗しました。時間をおいて再度お試しください。
+                </div>
+              )}
               <div className="full" style={{display: 'flex', justifyContent: 'flex-end', marginTop: 16}}>
                 <button
                   type="submit"
