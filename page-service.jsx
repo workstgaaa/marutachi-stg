@@ -307,10 +307,10 @@ function PageService() {
           <div className="reveal fleet-count-grid">
             {[
               ['トレーラー', '7台積み', '6台'],
-              ['キャリアカー', '5台積み', '3台'],
+              ['キャリアカー', '5台積み', '4台'],
               ['キャリアカー', '2台積み', '2台'],
               ['キャリアカー', '1台積み', '1台'],
-              ['合計', '', '12台'],
+              ['合計', '', '13台'],
             ].map(([type, spec, count], i) => (
               <div key={i} style={{
                 background: i === 4 ? 'var(--navy-900)' : 'var(--bg)',

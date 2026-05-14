@@ -61,11 +61,18 @@ function PageContact() {
   const [submitted, setSubmitted] = React.useState(false);
   useReveal([submitted]);
 
-  const onSubmit = (e) => {
+  const onSubmit = async (e) => {
     e.preventDefault();
     if (!agreed) return;
-    setSubmitted(true);
-    window.scrollTo({ top: 200, behavior: 'smooth' });
+    const res = await fetch('https://ssgform.com/s/aOu0E7Uj6cEc', {
+      method: 'POST',
+      body: new FormData(e.target),
+      headers: { 'X-Requested-With': 'XMLHttpRequest' },
+    });
+    if (res.ok) {
+      setSubmitted(true);
+      window.scrollTo({ top: 200, behavior: 'smooth' });
+    }
   };
 
   return (
@@ -89,23 +96,23 @@ function PageContact() {
             <form className="contact-form" onSubmit={onSubmit}>
 
               <Field label="会社名" full={false}>
-                <input type="text" placeholder="株式会社○○" />
+                <input type="text" name="会社名" placeholder="株式会社○○" />
               </Field>
 
               <Field label="お名前" req>
-                <input type="text" placeholder="山田 太郎" required />
+                <input type="text" name="お名前" placeholder="山田 太郎" required />
               </Field>
 
               <Field label="メールアドレス" req>
-                <input type="email" placeholder="example@example.com" required />
+                <input type="email" name="メールアドレス" placeholder="example@example.com" required />
               </Field>
 
               <Field label="電話番号" req>
-                <input type="tel" placeholder="048-000-0000" required />
+                <input type="tel" name="電話番号" placeholder="048-000-0000" required />
               </Field>
 
               <Field label="お問い合わせ種別" req full>
-                <select defaultValue="" required style={{width: 'fit-content', minWidth: 0}}>
+                <select name="お問い合わせ種別" defaultValue="" required style={{width: 'fit-content', minWidth: 0}}>
                   <option value="" disabled>選択してください</option>
                   <option>車両輸送のご依頼</option>
                   <option>ご協業について</option>
@@ -115,7 +122,7 @@ function PageContact() {
               </Field>
 
               <Field label="お問い合わせ内容" req full>
-                <textarea placeholder="ご用件をご記入ください" required style={{minHeight: 160}} />
+                <textarea name="お問い合わせ内容" placeholder="ご用件をご記入ください" required style={{minHeight: 160}} />
               </Field>
 
               {/* プライバシーポリシー */}
