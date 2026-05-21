@@ -56,11 +56,11 @@ function PageRecruit() {
           <div className="cta-block__inner reveal" style={{gridTemplateColumns: 'auto auto', justifyContent: 'start'}}>
             <div>
               <h2>あなたの<em>次</em>を、<br/>マルタチで。</h2>
-              <p style={{marginTop: 16, fontSize: 14, lineHeight: 1.85, color: 'var(--blue-fog)'}}>
-                応募・詳細はお問い合わせください。ご質問だけでも歓迎です。
-              </p>
             </div>
             <div className="actions">
+              <p style={{margin: '0 0 16px', fontSize: 17, lineHeight: 1.85, color: 'var(--blue-fog)'}}>
+                応募・詳細はお問い合わせください。<br/>ご質問だけでも歓迎です。
+              </p>
               <a href="#/contact" className="btn btn--lg">お問い合わせ<span className="btn-arrow">→</span></a>
             </div>
           </div>

@@ -32,8 +32,8 @@ function MapJapan({ activeRoute, onRouteHover }) {
     <svg viewBox="0 0 880 620" preserveAspectRatio="xMidYMid meet" role="img" aria-label="日本地図と輸送ルート">
       <defs>
         <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#060d1f" />
-          <stop offset="1" stopColor="#060d1f" />
+          <stop offset="0" stopColor="#1e3a5f" />
+          <stop offset="1" stopColor="#1e3a5f" />
         </linearGradient>
         <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
           <circle cx="2" cy="2" r="0.6" fill="rgba(244,242,236,0.08)" />

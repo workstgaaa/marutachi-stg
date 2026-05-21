@@ -47,7 +47,7 @@ function LinkCard({ href, en, label, desc, cta }) {
         gap: 12,
         fontFamily: 'var(--font-jp)',
         fontWeight: 600,
-        fontSize: 13,
+        fontSize: 16,
         letterSpacing: '0.04em',
         color: 'var(--paper)',
       }}>
@@ -66,7 +66,7 @@ function LinkCard({ href, en, label, desc, cta }) {
   );
 }
 
-const HERO_SLIDES = ['hero.jpg', 'service2.png', 'port.jpeg'];
+const HERO_SLIDES = ['office1.jpg', 'service2.png', 'service3.jpg'];
 
 function PageTop() {
   const [slideIdx, setSlideIdx] = React.useState(0);
@@ -92,7 +92,6 @@ function PageTop() {
         </div>
         <div className="hero__main" style={{
           gridTemplateColumns: '1fr', gap: 0,
-          margin: 'auto 0',
         }}>
           <div>
             <h1 className="hero__title">
@@ -123,7 +122,7 @@ function PageTop() {
                 lineHeight: 0.92,
                 letterSpacing: '-0.02em',
               }}>SERVICE</p>
-              <h2 style={{fontSize: 'clamp(15px, 1.8vw, 20px)', fontWeight: 600, letterSpacing: '0.04em', color: 'var(--fg-soft)'}}>輸送のすべてを、マルタチひとつで。</h2>
+              <h2 style={{fontSize: 'clamp(15px, 1.8vw, 20px)', fontWeight: 600, letterSpacing: '0.04em', color: 'var(--fg-soft)'}}>輸送のことなら、すべてマルタチへ。</h2>
             </div>
           </div>
 
@@ -146,8 +145,8 @@ function PageTop() {
             marginTop: 2,
             padding: 'clamp(32px, 4vw, 56px) clamp(28px, 4vw, 56px)',
             display: 'grid',
-            gridTemplateColumns: '80px 1fr',
-            gap: '32px',
+            gridTemplateColumns: '60px 1fr',
+            gap: '16px',
             alignItems: 'start',
             background: '#dce4ed',
             color: 'var(--navy-900)',
@@ -171,7 +170,7 @@ function PageTop() {
               }}>安心の輸送体制・保険完備</h3>
               <p style={{
                 margin: 0,
-                fontSize: 14,
+                fontSize: 16,
                 lineHeight: 1.85,
                 color: 'var(--navy-800)',
                 maxWidth: '60ch',
@@ -207,7 +206,7 @@ function PageTop() {
 
           {/* CONTACT LINK */}
           <div className="reveal" style={{marginTop: 1}}>
-            <a href="#/contact" style={{
+            <a href="#/contact" className="link-card-contact" style={{
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'space-between',
@@ -242,7 +241,7 @@ function PageTop() {
                 }}>お問い合わせ</p>
                 <p style={{
                   margin: '8px 0 0',
-                  fontSize: 13,
+                  fontSize: 16,
                   lineHeight: 1.85,
                   color: 'var(--blue-fog)',
                   maxWidth: '48ch',
@@ -254,7 +253,7 @@ function PageTop() {
                 gap: 12,
                 fontFamily: 'var(--font-jp)',
                 fontWeight: 600,
-                fontSize: 14,
+                fontSize: 16,
                 letterSpacing: '0.04em',
                 color: 'var(--paper)',
                 whiteSpace: 'nowrap',

@@ -19,13 +19,13 @@ function PageAbout() {
               <h2 style={{marginTop: 16}}>代表あいさつ</h2>
             </div>
           </div>
-          <div className="reveal" style={{marginTop: 48}}>
+          <div className="reveal" style={{marginTop: 48, fontSize: 18}}>
             <p>株式会社マルタチのホームページをご覧いただき、誠にありがとうございます。</p>
             <p>当社は自動車輸送・陸送を専門とし、お客様の大切な車両を安全かつ確実にお届けすることを使命として日々業務に取り組んでおります。</p>
             <p>創業以来、「丁寧な対応」「信頼に応える輸送」「迅速な対応」を大切にし、オートオークション輸送や業者間輸送、輸出関連輸送など、さまざまなご要望にお応えしてまいりました。</p>
             <p>現在では、本社営業所をはじめ、東北営業所・仙台ヤード・北関東HUBセンターを展開し、全国規模での輸送体制を整えております。最大7台積載のトレーラーを主軸とした輸送力に加え、自走輸送など柔軟な対応力により、お客様の多様なニーズにお応えできる体制を構築しております。</p>
-            <p>これからも現状に満足することなく、安全・品質の向上に努めるとともに、お客様により一層ご満足いただけるサービスを提供できるよう、社員一同努力を重ねてまいります。今後とも変わらぬご支援、ご愛顧を賜りますようお願い申し上げます。</p>
-            <p style={{marginTop: 32, fontFamily:'var(--font-jp)', fontWeight:600, fontSize:15}}>株式会社マルタチ　代表取締役　立川 正和</p>
+            <p>これからも現状に満足することなく、安全・品質の向上に努めるとともに、お客様により一層ご満足いただけるサービスを提供できるよう、社員一同努力を重ねてまいります。<br/>今後とも変わらぬご支援、ご愛顧を賜りますようお願い申し上げます。</p>
+            <p style={{marginTop: 32, fontFamily:'var(--font-jp)', fontWeight:600, fontSize:18}}>株式会社マルタチ　代表取締役　立川 正和</p>
           </div>
         </div>
       </section>
@@ -39,7 +39,7 @@ function PageAbout() {
               <h2 style={{marginTop: 16}}>会社紹介</h2>
             </div>
           </div>
-          <div className="reveal" style={{marginTop: 48}}>
+          <div className="reveal" style={{marginTop: 48, fontSize: 18}}>
             <p>株式会社マルタチは、埼玉県蓮田市を拠点に自動車輸送・陸送を専門に行う運送会社です。</p>
             <p>オートオークション輸送、業者間輸送、輸出港への車両輸送、納車代行など、幅広い車両輸送ニーズに対応しております。</p>
             <p>最大7台積載可能なトレーラーを主軸に、5台積み・2台積み・1台積みの積載車、さらに自走輸送を組み合わせることで、小ロットから大量輸送まで柔軟かつ効率的な輸送体制を構築しています。</p>
@@ -131,7 +131,28 @@ function PageAbout() {
                 <div style={{aspectRatio: '4/3', overflow: 'hidden', background: 'var(--paper-2)'}}>
                   {o.img
                     ? <img src={o.img} alt={o.label} style={{width:'100%', height:'100%', objectFit:'cover', display:'block'}} />
-                    : <div className="placeholder" style={{width:'100%', height:'100%'}}>PHOTO</div>
+                    : <div style={{width:'100%', height:'100%', display:'flex', alignItems:'center', justifyContent:'center', background:'var(--navy-900)'}}>
+                        <svg width="120" height="72" viewBox="0 0 120 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          {/* トラック本体 */}
+                          <rect x="2" y="20" width="72" height="36" fill="#1b4391"/>
+                          {/* キャブ */}
+                          <rect x="74" y="30" width="30" height="26" fill="#1b4391"/>
+                          {/* キャブ窓 */}
+                          <rect x="78" y="33" width="18" height="14" fill="#060d1f"/>
+                          {/* 荷台仕切り線 */}
+                          <line x1="26" y1="20" x2="26" y2="56" stroke="#060d1f" strokeWidth="1.5"/>
+                          <line x1="50" y1="20" x2="50" y2="56" stroke="#060d1f" strokeWidth="1.5"/>
+                          {/* 車輪 */}
+                          <circle cx="22" cy="58" r="8" fill="#060d1f"/>
+                          <circle cx="22" cy="58" r="4" fill="#6b86b0"/>
+                          <circle cx="58" cy="58" r="8" fill="#060d1f"/>
+                          <circle cx="58" cy="58" r="4" fill="#6b86b0"/>
+                          <circle cx="94" cy="58" r="8" fill="#060d1f"/>
+                          <circle cx="94" cy="58" r="4" fill="#6b86b0"/>
+                          {/* 地面ライン */}
+                          <line x1="2" y1="66" x2="118" y2="66" stroke="#1b4391" strokeWidth="1.5"/>
+                        </svg>
+                      </div>
                   }
                 </div>
                 {/* テキスト */}

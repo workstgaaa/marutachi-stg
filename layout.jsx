@@ -134,13 +134,14 @@ function Header({ route, overDark }) {
         </div>
       </header>
 
+      <div className={`drawer-backdrop ${drawerOpen ? 'is-open' : ''}`} onClick={() => setDrawerOpen(false)} />
       <div className={`mobile-drawer ${drawerOpen ? 'is-open' : ''}`}>
         <div className="drawer-head">
           <a href="#/" className="logo" onClick={() => setDrawerOpen(false)}>
             <img src="logo.png" alt="マルタチ" style={{height: 36, display: 'block'}} />
           </a>
-          <button className="menu-toggle" onClick={() => setDrawerOpen(false)} aria-label="Close">
-            <span>CLOSE</span>
+          <button className="close-btn" onClick={() => setDrawerOpen(false)} aria-label="Close">
+            <span className="close-icon"></span>
           </button>
         </div>
         <nav>

@@ -371,7 +371,7 @@ function PageService() {
             ))}
           </div>
           <div className="reveal" style={{marginTop: 32, display: 'flex', justifyContent: 'center'}}>
-            <a href="#/contact" className="btn btn--lg" style={{padding: '20px clamp(48px, 6vw, 80px)'}}>お問い合わせ<span className="btn-arrow">→</span></a>
+            <a href="#/contact" className="btn btn--lg" style={{padding: '20px 56px'}}>お問い合わせ<span className="btn-arrow">→</span></a>
           </div>
         </div>
       </section>
