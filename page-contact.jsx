@@ -123,7 +123,7 @@ function PageContact() {
               </Field>
 
               <Field label="お問い合わせ種別" req full>
-                <select name="お問い合わせ種別" defaultValue="" required style={{width: 'fit-content', minWidth: 0}}>
+                <select name="お問い合わせ種別" defaultValue="" required style={{width: 'fit-content', minWidth: 0, paddingRight: 48}}>
                   <option value="" disabled>選択してください</option>
                   <option>車両輸送のご依頼</option>
                   <option>ご協業について</option>
@@ -190,7 +190,7 @@ function PageContact() {
                   送信に失敗しました。時間をおいて再度お試しください。
                 </div>
               )}
-              <div className="full" style={{display: 'flex', justifyContent: 'flex-end', marginTop: 16}}>
+              <div className="full" style={{display: 'flex', justifyContent: 'center', marginTop: 16}}>
                 <button
                   type="submit"
                   className="btn btn--lg"
