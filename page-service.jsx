@@ -115,8 +115,8 @@ function PageService() {
                         fontSize: 12,
                       }}>✓</span>
                       <div style={{display: 'flex', flexDirection: 'column', gap: 2}}>
-                        <span style={{fontSize: 15, fontFamily: 'var(--font-jp)', color: 'var(--fg-soft)'}}>{s.note.label}</span>
-                        <span style={{fontSize: 15, lineHeight: 1.6}}>{s.note.text}</span>
+                        <span style={{fontSize: 17, fontFamily: 'var(--font-jp)', color: 'var(--fg-soft)'}}>{s.note.label}</span>
+                        <span style={{fontSize: 17, lineHeight: 1.6}}>{s.note.text}</span>
                       </div>
                     </div>
                   </div>
@@ -133,8 +133,8 @@ function PageService() {
           <div className="reveal" style={{
             padding: 'clamp(40px, 6vw, 72px) 0',
             display: 'grid',
-            gridTemplateColumns: '80px 1fr',
-            gap: '32px',
+            gridTemplateColumns: '60px 1fr',
+            gap: '16px',
             alignItems: 'start',
           }}>
             <div style={{
@@ -156,7 +156,7 @@ function PageService() {
               }}>安心の輸送体制・保険完備</h3>
               <p style={{
                 margin: 0,
-                fontSize: 14,
+                fontSize: 17,
                 lineHeight: 1.85,
                 color: 'var(--navy-800)',
                 maxWidth: '60ch',
@@ -216,9 +216,12 @@ function PageService() {
                   fontFamily: 'var(--font-jp)',
                   fontWeight: 700,
                   fontSize: 'clamp(20px, 2.1vw, 26px)',
+                  lineHeight: 1.4,
                   margin: 0,
                   letterSpacing: '0.02em',
                   color: 'var(--paper)',
+                  height: '2.9em',
+                  overflow: 'visible',
                 }}>
                   <span style={{
                     background: 'linear-gradient(transparent 55%, rgba(255, 248, 0, 0.65) 55%)',
@@ -227,7 +230,7 @@ function PageService() {
                 </h3>
                 <p style={{
                   margin: 0,
-                  fontSize: 15,
+                  fontSize: 17,
                   lineHeight: 1.85,
                   color: 'var(--blue-fog)',
                 }}>{s.desc}</p>
@@ -246,46 +249,75 @@ function PageService() {
               <h2 style={{marginTop: 16}}>輸送エリア</h2>
             </div>
           </div>
-          <div className="reveal" style={{display: 'flex', justifyContent: 'center'}}>
-            <div className="map-canvas map-canvas-wrap" style={{width: '55%'}}>
+          <div className="reveal map-legend-wrap" style={{display: 'flex', justifyContent: 'center'}}>
+            <div className="map-canvas map-canvas-wrap" style={{width: '80%'}}>
               <MapJapan activeRoute={activeRoute} onRouteHover={setActiveRoute} />
-            </div>
-          </div>
-
-          {/* エリア凡例 */}
-          <div className="reveal" style={{
-            display: 'flex',
-            gap: 'clamp(24px, 4vw, 48px)',
-            justifyContent: 'center',
-            marginTop: 32,
-            flexWrap: 'wrap',
-          }}>
-            {[
-              { color: '#6b86b0', label: '自社対応可能エリア' },
-              { color: '#c8b96e', label: '自社ネットワーク対応エリア' },
-            ].map(item => (
-              <div key={item.label} style={{
-                display: 'flex', alignItems: 'center', gap: 12,
-                padding: '14px 20px',
-                border: `1px solid ${item.color}`,
-                borderLeft: `4px solid ${item.color}`,
+              {/* エリア凡例（デスクトップ：絶対配置） */}
+              <div className="map-legend-cards" style={{
+                position: 'absolute',
+                top: 56,
+                left: 56,
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 10,
               }}>
-                <span style={{
-                  display: 'inline-block',
-                  width: 14, height: 14,
-                  borderRadius: '50%',
-                  background: item.color,
-                  flexShrink: 0,
-                }} />
-                <span style={{
-                  fontFamily: 'var(--font-jp)',
-                  fontSize: 14,
-                  fontWeight: 700,
-                  color: 'var(--navy-800)',
-                  letterSpacing: '0.04em',
-                }}>{item.label}</span>
+                {[
+                  { color: '#6b86b0', label: '自社対応可能エリア' },
+                  { color: '#c8b96e', label: '自社ネットワーク対応エリア' },
+                ].map(item => (
+                  <div key={item.label} style={{
+                    display: 'flex', alignItems: 'center', gap: 16,
+                    padding: '20px 32px',
+                    border: `1px solid ${item.color}`,
+                    borderLeft: `6px solid ${item.color}`,
+                  }}>
+                    <span style={{
+                      display: 'inline-block',
+                      width: 18, height: 18,
+                      borderRadius: '50%',
+                      background: item.color,
+                      flexShrink: 0,
+                    }} />
+                    <span style={{
+                      fontFamily: 'var(--font-jp)',
+                      fontSize: 17,
+                      fontWeight: 700,
+                      color: 'var(--paper)',
+                      letterSpacing: '0.04em',
+                    }}>{item.label}</span>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+            {/* エリア凡例（モバイル：地図の下） */}
+            <div className="map-legend-mobile">
+              {[
+                { color: '#6b86b0', label: '自社対応可能エリア' },
+                { color: '#c8b96e', label: '自社ネットワーク対応エリア' },
+              ].map(item => (
+                <div key={item.label} style={{
+                  display: 'flex', alignItems: 'center', gap: 12,
+                  padding: '14px 20px',
+                  border: `1px solid ${item.color}`,
+                  borderLeft: `4px solid ${item.color}`,
+                }}>
+                  <span style={{
+                    display: 'inline-block',
+                    width: 14, height: 14,
+                    borderRadius: '50%',
+                    background: item.color,
+                    flexShrink: 0,
+                  }} />
+                  <span style={{
+                    fontFamily: 'var(--font-jp)',
+                    fontSize: 14,
+                    fontWeight: 700,
+                    color: 'var(--navy-800)',
+                    letterSpacing: '0.04em',
+                  }}>{item.label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -323,7 +355,7 @@ function PageService() {
                 gap: 12,
               }}>
                 <span style={{fontFamily: 'var(--font-jp)', fontWeight: 800, fontSize: 15, letterSpacing: '-0.01em', color: i === 4 ? 'var(--paper)' : 'inherit'}}>
-                  {spec ? `${spec} ${type}` : type}
+                  {spec ? `${spec}${type}` : type}
                 </span>
                 <span style={{
                   fontFamily: 'var(--font-display)',
