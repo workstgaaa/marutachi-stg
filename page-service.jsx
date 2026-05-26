@@ -332,6 +332,7 @@ function PageService() {
             </div>
           </div>
           <div className="reveal fleet-photo-grid">
+            <img src="fleet3.jpeg" alt="車両 3" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
             <img src="fleet1.jpeg" alt="車両 1" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
             <img src="fleet2.jpeg" alt="車両 2" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
           </div>
