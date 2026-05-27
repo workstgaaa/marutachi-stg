@@ -158,7 +158,12 @@ function PageTop() {
               display: 'flex', alignItems: 'center', justifyContent: 'center',
               fontSize: 22,
               color: 'var(--navy-800)',
-            }}>🛡</div>
+            }}>
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2L4 6v6.5C4 17.8 7.6 22 12 23.5c4.4-1.5 8-5.7 8-11V6L12 2z" />
+                <polyline points="8,12.5 11,15.5 16.5,9.5" />
+              </svg>
+            </div>
             <div style={{display: 'flex', flexDirection: 'column', gap: 10}}>
               <h3 style={{
                 fontFamily: 'var(--font-jp)',

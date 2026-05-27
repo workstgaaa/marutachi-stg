@@ -910,6 +910,10 @@
 }
 @media (max-width: 880px) {
   .svc-detail__inner, .svc-detail--alt .svc-detail__inner { grid-template-columns: 1fr; gap: 32px; direction: ltr; }
+  .svc-detail__media-wrap { padding: 0 14px 14px 0; }
+  .svc-detail--alt .svc-detail__media-wrap { padding: 0 0 14px 14px; }
+  .svc-detail__media-dots { top: 14px; left: 14px; }
+  .svc-detail--alt .svc-detail__media-dots { top: 14px; right: 14px; left: 0; }
 }
 
 /* ---------- About page ---------- */

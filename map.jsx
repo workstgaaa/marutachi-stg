@@ -27,33 +27,12 @@ const ROUTES = [
 
 function MapJapan({ activeRoute, onRouteHover }) {
   const hubMap = React.useMemo(() => Object.fromEntries(HUBS.map(h => [h.id, h])), []);
+  const [imgKey] = React.useState(() => Date.now());
 
   return (
     <svg viewBox="0 0 880 620" preserveAspectRatio="xMidYMid meet" role="img" aria-label="日本地図と輸送ルート">
-      <defs>
-        <linearGradient id="seaGrad" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0" stopColor="#1e3a5f" />
-          <stop offset="1" stopColor="#1e3a5f" />
-        </linearGradient>
-        <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
-          <circle cx="2" cy="2" r="0.6" fill="rgba(244,242,236,0.08)" />
-        </pattern>
-      </defs>
-      <rect width="880" height="620" fill="url(#seaGrad)" />
-      <rect width="880" height="620" fill="url(#dots)" />
-
-      {/* Latitude/longitude lines */}
-      <g stroke="rgba(244,242,236,0.05)" strokeWidth="0.5">
-        {[100, 200, 300, 400, 500].map(y => (
-          <line key={'h'+y} x1="0" y1={y} x2="880" y2={y} />
-        ))}
-        {[200, 400, 600].map(x => (
-          <line key={'v'+x} x1={x} y1="0" x2={x} y2="620" />
-        ))}
-      </g>
-
-      {/* Japan landmass */}
-      <image href="japan_dots_spot.png" x="0" y="0" width="880" height="620" preserveAspectRatio="xMidYMid meet" style={{opacity: 0.7}} />
+      <rect width="880" height="620" fill="#1e3a5f" />
+      <image key={imgKey} href="japan_dots_spot.png" x="0" y="0" width="880" height="620" preserveAspectRatio="xMidYMid meet" opacity="0.9" />
 
       {/* Routes */}
       <g>
