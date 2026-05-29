@@ -83,6 +83,7 @@ function useHashRoute() {
     : navState.hash === '#/about' ? 'about'
     : navState.hash === '#/recruit' ? 'recruit'
     : navState.hash === '#/contact' ? 'contact'
+    : navState.hash === '#/contact/thanks' ? 'contact'
     : 'top';
   return { route, scrollTarget: navState.scrollTarget };
 }

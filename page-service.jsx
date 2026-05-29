@@ -45,7 +45,7 @@ function PageService() {
       id: 'export',
       n: '03',
       jp: '輸出港への車両輸送',
-      img: 'port.jpeg',
+      img: 'port.jpg',
       desc: 'オークション会場やディーラーから各輸出港までの輸送に対応。輸出スケジュールに合わせた迅速な対応で、海外ビジネスを支援します。安定した輸送体制で、大量輸送にも対応可能です。',
       feats: [
         '横浜・川崎・神戸・博多港への定期便',
@@ -337,9 +337,9 @@ function PageService() {
             </div>
           </div>
           <div className="reveal fleet-photo-grid">
-            <img src="fleet3.jpeg" alt="車両 3" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
-            <img src="fleet1.jpeg" alt="車両 1" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
-            <img src="fleet2.jpeg" alt="車両 2" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
+            <img src="fleet3.jpg" alt="車両 3" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
+            <img src="fleet1.jpg" alt="車両 1" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
+            <img src="fleet2.jpg" alt="車両 2" style={{width: '100%', height: '100%', objectFit: 'cover', display: 'block'}} />
           </div>
 
           <div className="reveal fleet-count-grid">

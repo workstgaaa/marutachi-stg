@@ -58,7 +58,7 @@ Mail：info@marutachi.com`;
 
 function PageContact() {
   const [agreed, setAgreed] = React.useState(false);
-  const [submitted, setSubmitted] = React.useState(false);
+  const [submitted, setSubmitted] = React.useState(() => window.location.hash === '#/contact/thanks');
   useReveal([submitted]);
 
   const [error, setError] = React.useState(false);
@@ -99,9 +99,9 @@ function PageContact() {
           {submitted ? (
             <div className="form-success" key="success">
               <div className="check-big">✓</div>
-              <h3>お問い合わせを受け付けました</h3>
-              <p>担当者よりご連絡いたします。</p>
-              <button className="btn btn--ghost" onClick={() => setSubmitted(false)}>もう一度送信する</button>
+              <h3>お問い合わせありがとうございます。</h3>
+              <p>お送りいただきました内容を確認の上、<br/>担当者より折り返しご連絡いたします。</p>
+              <a href="#/" className="btn btn--ghost" style={{marginTop: 40}}>トップページに戻る</a>
             </div>
           ) : (
             <form className="contact-form" onSubmit={onSubmit}>

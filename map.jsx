@@ -30,7 +30,9 @@ function MapJapan({ activeRoute, onRouteHover }) {
   const [imgKey] = React.useState(() => Date.now());
 
   return (
-    <svg viewBox="0 0 880 620" preserveAspectRatio="xMidYMid meet" role="img" aria-label="日本地図と輸送ルート">
+    <svg viewBox="0 0 880 620" preserveAspectRatio="xMidYMid meet"
+      style={{display: 'block', width: '100%', height: '100%'}}
+      role="img" aria-label="日本地図と輸送ルート">
       <rect width="880" height="620" fill="#1e3a5f" />
       <image key={imgKey} href="japan_dots_spot.png" x="0" y="0" width="880" height="620" preserveAspectRatio="xMidYMid meet" opacity="0.9" />
 
