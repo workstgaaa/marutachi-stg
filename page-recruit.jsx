@@ -12,7 +12,7 @@ function PageRecruit() {
     ['休日・時間外労働', 'ローテーション制（月6日休）\n※シフトにより決定\n※希望休相談可\n時間外労働あり'],
     ['仕事内容', 'トレーラードライバー・大型ドライバーの募集です。\n《業務拡大・新ヤード開設に伴う増員募集！》\n\n主にオークション車などの商品車を、各拠点から目的地まで安全に輸送していただくお仕事です。\n\n使用する車両は、7台積み・5台積み・2台積み・ローダーのキャリアカー。\n経験やスキルに応じて担当車両を決定しますので、無理なくステップアップできます。\n\nまた、積み込み・積み下ろしも含めた一連の業務をお任せしますが、先輩ドライバーがしっかりサポートしますので未経験の方も安心です。\n\n現在は、未経験スタートのドライバーや女性ドライバーも多数活躍中。\n「車が好き」「運転が好き」という気持ちがあれば大歓迎です。'],
     ['必要資格', '大型自動車免許'],
-    ['福利厚生', '雇用保険'],
+    ['福利厚生', '雇用保険\n100円社食'],
     ['試用・研修', '試用期間あり（1週間～1か月程度）\n雇用条件は本採用時と同じ'],
     ['勤務期間', '最低勤務期間：半年以上'],
     ['応募方法', '電話連絡後、履歴書（写真添付）持参にて面接応募\n■連絡先　TEL：048-884-8106　担当：浅香'],
@@ -48,6 +48,40 @@ function PageRecruit() {
               ))}
             </tbody>
           </table>
+        </div>
+      </section>
+
+      {/* WELFARE — OFFICE DE YASAI */}
+      <section className="recruit-welfare">
+        <div className="container">
+          <div className="reveal" style={{marginBottom: 56}}>
+            <p className="recruit-welfare__label">— WELFARE / 福利厚生</p>
+            <h2 style={{marginTop: 24, fontSize: 'clamp(28px, 4vw, 52px)', fontFamily:'var(--font-jp)', fontWeight:700, letterSpacing:'0.02em', lineHeight:1.18}}>社員の<em style={{fontFamily:'var(--font-display)', fontStyle:'italic', fontWeight:400, color:'var(--blue-dusty)'}}>健康</em>と、<br/>働きやすさを支える。</h2>
+          </div>
+
+          <div className="welfare-feature reveal">
+            <div>
+              <div className="welfare-feature__photo">
+                <img src="images/yasai_main.jpg" alt="OFFICE DE YASAI 設置風景" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+              </div>
+              <p style={{margin:'8px 0 0', fontSize:11, color:'var(--fg-soft)', letterSpacing:'0.06em'}}>※写真はイメージです</p>
+            </div>
+            <div className="welfare-feature__body">
+              <h3 className="welfare-heading">オフィスで野菜を、手軽に。毎日に。</h3>
+              <p className="welfare-desc">
+                当社では、社員一人ひとりが健やかに働ける環境づくりの一環として、設置型健康社食®サービス「OFFICE DE YASAI（オフィスでやさい）」を導入しています。<br/><br/>
+                オフィス内に専用の冷凍庫を設置し、惣菜やお弁当、軽食などを手軽に利用できる環境を整備しています。忙しい業務の合間や外出が難しい日でも社内で手軽に健康的な食事を選べることで、社員の食生活を身近な場所からサポートしています。<br/><br/>
+                食事は、日々の働き方やコンディションにも関わる大切な要素です。当社はこれからも、社員が安心して働き続けられる職場づくりを大切にし、働く環境の充実に取り組んでまいります。
+              </p>
+              <ul className="welfare-list">
+                <li>新鮮な野菜・健康的な食品を社内に常備</li>
+                <li>100円〜手軽に利用可能</li>
+                <li>仕事の合間にいつでも栄養補給</li>
+                <li>社員の健康維持・食生活をサポート</li>
+              </ul>
+            </div>
+          </div>
+
         </div>
       </section>
 
