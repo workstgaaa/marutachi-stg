@@ -54,17 +54,20 @@ function PageRecruit() {
       {/* WELFARE — OFFICE DE YASAI */}
       <section className="recruit-welfare">
         <div className="container">
-          <div className="section-head reveal">
+          <div className="reveal" style={{marginBottom: 56}}>
             <p className="recruit-welfare__label">— WELFARE / 福利厚生</p>
-            <h2 style={{marginTop: 8, fontSize: 'clamp(28px, 4vw, 52px)'}}>社員の<em>健康</em>と、<br/>働きやすさを支える。</h2>
+            <h2 style={{marginTop: 24, fontSize: 'clamp(28px, 4vw, 52px)', fontFamily:'var(--font-jp)', fontWeight:700, letterSpacing:'0.02em', lineHeight:1.18}}>社員の<em style={{fontFamily:'var(--font-display)', fontStyle:'italic', fontWeight:400, color:'var(--blue-dusty)'}}>健康</em>と、<br/>働きやすさを支える。</h2>
           </div>
 
           <div className="welfare-feature reveal">
-            <div className="welfare-feature__photo">
-              <img src="images/yasai_main.jpg" alt="OFFICE DE YASAI 設置風景" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+            <div>
+              <div className="welfare-feature__photo">
+                <img src="images/yasai_main.jpg" alt="OFFICE DE YASAI 設置風景" style={{width:'100%',height:'100%',objectFit:'cover',display:'block'}} />
+              </div>
+              <p style={{margin:'8px 0 0', fontSize:11, color:'var(--fg-soft)', letterSpacing:'0.06em'}}>※写真はイメージです</p>
             </div>
             <div className="welfare-feature__body">
-              <h3 className="welfare-heading">オフィスで野菜を、<br/>手軽に。毎日に。</h3>
+              <h3 className="welfare-heading">オフィスで野菜を、手軽に。毎日に。</h3>
               <p className="welfare-desc">
                 当社では、社員一人ひとりが健やかに働ける環境づくりの一環として、設置型健康社食®サービス「OFFICE DE YASAI（オフィスでやさい）」を導入しています。<br/><br/>
                 オフィス内に専用の冷凍庫を設置し、惣菜やお弁当、軽食などを手軽に利用できる環境を整備しています。忙しい業務の合間や外出が難しい日でも社内で手軽に健康的な食事を選べることで、社員の食生活を身近な場所からサポートしています。<br/><br/>
@@ -79,12 +82,6 @@ function PageRecruit() {
             </div>
           </div>
 
-          <div className="welfare-photos reveal">
-            {/* 追加写真があれば <img src="yasai2.jpg" alt="..." /> のように差し替えてください */}
-            <div className="welfare-photo-placeholder" />
-            <div className="welfare-photo-placeholder" />
-            <div className="welfare-photo-placeholder" />
-          </div>
         </div>
       </section>
 
