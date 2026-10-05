@@ -1036,7 +1036,7 @@
 }
 
 .recruit-jobs {
-  padding: clamp(80px, 12vw, 140px) 0;
+  padding: clamp(80px, 12vw, 140px) 0 clamp(48px, 7vw, 88px);
   background: var(--paper);
 }
 .job-card {
@@ -1272,7 +1272,7 @@
 
 /* ── WELFARE / OFFICE DE YASAI ── */
 .recruit-welfare {
-  padding: 100px 0;
+  padding: 0 0 clamp(48px, 7vw, 88px);
   background: var(--bg);
 }
 
