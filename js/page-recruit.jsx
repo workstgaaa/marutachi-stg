@@ -67,7 +67,7 @@ function PageRecruit() {
               <p style={{margin:'8px 0 0', fontSize:11, color:'var(--fg-soft)', letterSpacing:'0.06em'}}>※写真はイメージです</p>
             </div>
             <div className="welfare-feature__body">
-              <h3 className="welfare-heading">オフィスで野菜を、手軽に。毎日に。</h3>
+              <h3 className="welfare-heading">オフィスで野菜を、いつでも手軽に。</h3>
               <p className="welfare-desc">
                 当社では、社員一人ひとりが健やかに働ける環境づくりの一環として、設置型健康社食®サービス「OFFICE DE YASAI（オフィスでやさい）」を導入しています。<br/><br/>
                 オフィス内に専用の冷凍庫を設置し、惣菜やお弁当、軽食などを手軽に利用できる環境を整備しています。忙しい業務の合間や外出が難しい日でも社内で手軽に健康的な食事を選べることで、社員の食生活を身近な場所からサポートしています。<br/><br/>
