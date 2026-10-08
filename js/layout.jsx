@@ -9,13 +9,23 @@ const PAGES = [
 ];
 
 function useHashRoute() {
+  const initHash = window.location.hash || '#/';
+  const reloadY = (() => {
+    try { const v = sessionStorage.getItem('sy_' + initHash); return v !== null ? +v : null; } catch { return null; }
+  })();
+
   const [navState, setNavState] = React.useState({
-    hash: window.location.hash || '#/',
-    scrollTarget: null,
+    hash: initHash,
+    scrollTarget: reloadY,
   });
 
   React.useEffect(() => {
     if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+
+    const saveScroll = () => {
+      try { sessionStorage.setItem('sy_' + (window.location.hash || '#/'), window.scrollY); } catch {}
+    };
+    window.addEventListener('scroll', saveScroll, { passive: true });
 
     const saved = {};          // ページごとのスクロール位置
     let curHash = window.location.hash || '#/';
@@ -74,6 +84,7 @@ function useHashRoute() {
       if (useNavAPI) window.navigation.removeEventListener('navigate', onNavigate);
       if (!useNavAPI) window.removeEventListener('popstate', onPopState);
       window.removeEventListener('hashchange', onChange);
+      window.removeEventListener('scroll', saveScroll);
     };
   }, []);
 
