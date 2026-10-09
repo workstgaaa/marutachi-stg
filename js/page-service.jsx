@@ -18,7 +18,7 @@ function PageService() {
       id: 'auction',
       n: '01',
       jp: 'オークション輸送',
-      img: 'images/auction.png',
+      img: 'images/auction.jpg',
       desc: '全国のオートオークション会場への搬入・搬出に対応。出品車両の持ち込みから、落札後の車両引き上げまで一括してお任せいただけます。スケジュール管理と確実な輸送で、スムーズな取引をサポートします。',
       feats: [
         '落札即日〜最短 24h で運び出し',
@@ -32,7 +32,7 @@ function PageService() {
       id: 'b2b',
       n: '02',
       jp: '業者間輸送・納車代行',
-      img: 'images/service2.png',
+      img: 'images/service2.jpg',
       desc: '中古車販売店・買取店・法人間での車両輸送を行っています。店舗間移動や在庫車の移送、エンドユーザーへの納車代行まで柔軟に対応。自走・積載の最適な方法で、安全かつ効率的にお届けします。',
       feats: [
         '単車・キャリア両対応で柔軟運用',

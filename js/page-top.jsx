@@ -66,7 +66,7 @@ function LinkCard({ href, en, label, desc, cta }) {
   );
 }
 
-const HERO_SLIDES = ['images/office1.jpg', 'images/service2.png', 'images/service3.jpg'];
+const HERO_SLIDES = ['images/office1.jpg', 'images/service2.jpg', 'images/service3.jpg'];
 
 function PageTop() {
   const [slideIdx, setSlideIdx] = React.useState(0);
